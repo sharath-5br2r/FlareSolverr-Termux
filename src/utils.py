@@ -186,7 +186,7 @@ def get_webdriver(proxy: dict = None) -> WebDriver:
     driver_exe_path = None
     version_main = None
     if os.path.exists("/app/chromedriver"):
-	# running insider docker
+	# running inside Docker
         driver_exe_path = "/app/chromedriver"
     elif os.path.exists("/data/data/com.termux/files/usr/bin/chromedriver"):
         # running inside Termux
