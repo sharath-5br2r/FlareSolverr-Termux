@@ -22,7 +22,7 @@ from multiprocessing import Lock
 
 logger = logging.getLogger(__name__)
 
-IS_POSIX = sys.platform.startswith(("darwin", "cygwin", "linux", "linux2", "freebsd"))
+IS_POSIX = sys.platform.startswith(("darwin", "cygwin", "linux", "linux2", "freebsd", "android"))
 
 
 class Patcher(object):
