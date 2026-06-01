@@ -26,8 +26,7 @@ many requests at once. With each request a new browser is launched.
 It is also possible to use a permanent session. However, if you use sessions, you should make sure to close them as
 soon as you are done using them.
 
-## Installation
-
+## Installation 
 ### Docker
 
 It is recommended to install using a Docker container because the project depends on an external browser that is
@@ -91,6 +90,7 @@ This is the recommended way for Windows users.
 
 - Install [Python 3.11](https://www.python.org/downloads/).
 - Install [Chrome](https://www.google.com/intl/en_us/chrome/) (all OS) or [Chromium](https://www.chromium.org/getting-involved/download-chromium/) (just Linux, it doesn't work in Windows) web browser.
+- (Termux Specific) Use this command to install all the required deps `pkg install chromium git python xorg-server-xvfb`
 - (Only in Linux) Install [Xvfb](https://en.wikipedia.org/wiki/Xvfb) package.
 - (Only in macOS) Install [XQuartz](https://www.xquartz.org/) package.
 - Clone this repository and open a shell in that path.
