@@ -13,7 +13,10 @@ import undetected_chromedriver as uc
 
 FLARESOLVERR_VERSION = None
 PLATFORM_VERSION = None
-CHROME_EXE_PATH = "/data/data/com.termux/files/usr/bin/chromium-browser"
+if platform.system() == "Android" :
+	CHROME_EXE_PATH = "/data/data/com.termux/files/usr/bin/chromium-browser"
+else:
+	CHROME_EXE_PATH = None
 CHROME_MAJOR_VERSION = None
 USER_AGENT = None
 XVFB_DISPLAY = None
@@ -182,8 +185,11 @@ def get_webdriver(proxy: dict = None) -> WebDriver:
     # if we are inside the Docker container, we avoid downloading the driver
     driver_exe_path = None
     version_main = None
-    if os.path.exists("/data/data/com.termux/files/usr/bin/chromedriver"):
-        # running inside Docker
+    if os.path.exists("/app/chromedriver")
+	# running insider docker
+	driver_exe_path = "/app/chromedriver"
+    elif if os.path.exists("/data/data/com.termux/files/usr/bin/chromedriver"):
+        # running inside Termux
         driver_exe_path = "/data/data/com.termux/files/usr/bin/chromedriver"
     else:
         version_main = get_chrome_major_version()
